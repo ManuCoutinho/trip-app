@@ -2,6 +2,30 @@
   "name": "trip-app",
   "version": "0.1.0",
   "private": true,
+  "author": "Emanuela Coutinho",
+  "license": "MIT License",
+  "description": "App de viagens e fotos",
+  "bugs": {
+    "url": "https://github.com/ManuCoutinho/trip-app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ManuCoutinho/trip-app"
+  },
+  "keywords": [
+    "next.js",
+    "react",
+    "typescript",
+    "jest",
+    "storybook"
+  ],
+  "engines": {
+    "node": ">=18.12.0",
+    "npm": ">=8.19.2"
+  },
+  "overrides": {
+    "react": "18.2.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,16 +36,16 @@
     "test:watch": "jest --watch"
   },
   "lint-staged": {
-    ".{ts,tsx}": [
-      "npm run lint --fix",
+    "*.{ts,tsx}": [
+      "eslint src --fix",
       "npm run test --findRelatedTests --bail"
     ],
-    ".{json,md}": [
+    "*.{json,md, yaml}": [
       "prettier --write"
     ]
   },
   "dependencies": {
-    "next": "12.3.1",
+    "next": "^13.0.1",
     "nookies": "^2.5.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -29,6 +53,7 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.18.6",
+    "@commitlint/config-conventional": "^17.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.1.2",
@@ -49,6 +74,10 @@
     "jest-environment-jsdom": "^29.1.2",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
+    "stylelint": "^14.14.0",
+    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
     "typescript": "4.8.4"
   }
 }
