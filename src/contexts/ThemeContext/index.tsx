@@ -12,9 +12,9 @@ export const ThemeContextProvider: FC<ThemeContextProviderProps> = ({
 }) => {
   const cookies = parseCookies()
 
-  const userTheme = cookies.theme === 'dark' ? dark : light
+  const userTheme = cookies.theme === 'light' ? light : dark
 
-  const [theme, setTheme] = useState<DefaultTheme>(combineTheme(userTheme))
+  const [theme, setTheme] = useState<DefaultTheme>(combineTheme(dark))
 
   function toggleTheme() {
     if (theme.title === 'dark') {

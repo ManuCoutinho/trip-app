@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinkWrapper/> should match to snapshot  1`] = `
+<div
+  class="sc-bcXHqe hTrUwU"
+>
+  <a
+    href="/about"
+    title="link to about"
+  >
+    children
+  </a>
+</div>
+`;

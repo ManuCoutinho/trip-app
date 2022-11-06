@@ -28,6 +28,12 @@ declare module 'styled-components' {
       lg: string
       full: string
     }
+    spacing: {
+      sm: string
+      md: string
+      lg: string
+      container: string
+    }
   }
 
   export interface CustomTheme {
@@ -36,17 +42,9 @@ declare module 'styled-components' {
       black: string
       white: string
       background: string
-      body: string
       primary: string
       secondary: string
-      text: string
-      title: string
-      info: string
       highlight: string
-      bg_card: string
-      glass: string
-      bg_modal: string
-      disabled: string
     }
   }
 }

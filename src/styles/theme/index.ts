@@ -6,14 +6,14 @@ export type Theme = typeof defaultTheme
 
 const defaultTheme = {
   font: {
-    text: "'Montserrat Alternates', sans-serif",
-    title: "'Josefin Sans', sans-serif"
+    text: 'sans-serif',
+    title: 'sans-serif'
   },
   fontSize: {
-    xsm: '0.75em',
-    sm: '0.875em',
-    md: '1em',
-    lg: '1.5em',
+    xsm: '0.75rem',
+    sm: '0.875rem',
+    md: '1rem',
+    lg: '1.5rem',
     xl: '2rem',
     xlg: '3rem'
   },
@@ -29,6 +29,12 @@ const defaultTheme = {
     md: '16px',
     lg: '25px',
     full: '50%'
+  },
+  spacing: {
+    sm: '1.5rem',
+    md: '3rem',
+    lg: '5rem',
+    container: '100rem'
   }
 } as const
 

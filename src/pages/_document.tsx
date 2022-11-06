@@ -44,8 +44,10 @@ class MyDocument extends Document {
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link rel='preconnect' href='https://fonts.gstatic.com' />
           <link
-            href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Montserrat+Alternates:ital,wght@0,400;1,100&display=swap'
             rel='stylesheet'
+            href='https://unpkg.com/leaflet@1.9.2/dist/leaflet.css'
+            integrity='sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14='
+            crossOrigin=''
           />
           <link
             rel='icon'

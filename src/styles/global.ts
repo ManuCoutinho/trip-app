@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 *, ::after, ::before {
@@ -26,9 +26,11 @@ body, html, #__next {
   height: 100%; 
 }
 body {
- background: ${(props) => props.theme.colors.body};
- color: ${(props) => props.theme.colors.text};
- transition: ${(props) => props.theme.transition};
+  ${({ theme }) => css`
+    background: ${theme.colors.background};
+    color: ${theme.colors.white};
+    transition: ${theme.transition};
+  `}
 }
 
 body, input, textarea, button {
@@ -36,9 +38,16 @@ body, input, textarea, button {
  font-size: 16px;
 }
 
+p {
+${({ theme }) => css`
+  font-size: ${theme.fontSize.lg};
+`}
+}
 h1, h2, h3, h4, h5, h6, strong {
- font-weight: ${(props) => props.theme.fontWeight.bold};
- font-family: ${(props) => props.theme.font.title}; 
+ ${({ theme }) => css`
+   font-weight: ${theme.fontWeight.bold};
+   font-family: ${theme.font.title};
+ `}
 }
 
 a {
