@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core'
 
 export type FragmentType<TDocumentType extends DocumentNode<any, any>> =

@@ -3,10 +3,11 @@ import { MapContainer, TileLayer, Marker, Tooltip } from 'react-leaflet'
 import { MapProps } from './types'
 
 const Map: React.FC<MapProps> = ({ places }) => {
+  // onClick={() => console.log(name)}
   return (
     <MapContainer
-      center={[51.505, -0.09]}
-      zoom={3}
+      center={[31.505, -0.09]}
+      zoom={2}
       scrollWheelZoom={true}
       style={{ width: '100%', height: '100%' }}
     >
