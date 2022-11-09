@@ -24,6 +24,42 @@ html {
 body, html, #__next {
   scroll-behavior: smooth;
   height: 100%; 
+
+  /* nprogress style overwriting*/
+    #nprogress {
+      pointer-events: none;
+    }
+    #nprogress .bar {
+      background: ${({ theme }) => theme.colors.highlight};
+      position: fixed;
+      z-index: 1500;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0.5rem;
+    }
+    /* Fancy blur effect */
+    #nprogress .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px #e20e8d,
+        0 0 5px #e20e8d;
+      opacity: 1;
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+      -ms-transform: rotate(3deg) translate(0px, -4px);
+      transform: rotate(3deg) translate(0px, -4px);
+    }
+    /* Remove these to get rid of the spinner */
+    .nprogress-custom-parent {
+      overflow: hidden;
+      position: relative;
+    }
+    .nprogress-custom-parent #nprogress .bar {
+      position: absolute;
+    }
 }
 body {
   ${({ theme }) => css`
