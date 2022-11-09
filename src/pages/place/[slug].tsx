@@ -20,7 +20,7 @@ export default Place
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const { places } = await graphqlClient.request<GetPlacesQuery>(GET_PLACES, {
-    first: 3
+    first: 10
   })
 
   const paths = places?.map(({ slug }) => ({
@@ -43,6 +43,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   if (!place) return { notFound: true }
   return {
+    revalidate: 60 * 60 * 24, //24hr
     props: {
       place
     }

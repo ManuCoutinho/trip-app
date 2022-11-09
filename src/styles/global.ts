@@ -36,7 +36,7 @@ body, html, #__next {
       top: 0;
       left: 0;
       width: 100%;
-      height: 0.5rem;
+      height: 0.25rem;
     }
     /* Fancy blur effect */
     #nprogress .peg {
@@ -45,8 +45,8 @@ body, html, #__next {
       right: 0px;
       width: 100px;
       height: 100%;
-      box-shadow: 0 0 10px #e20e8d,
-        0 0 5px #e20e8d;
+      box-shadow: 0 0 10px #F88F00,
+        0 0 5px #F88F00;
       opacity: 1;
       -webkit-transform: rotate(3deg) translate(0px, -4px);
       -ms-transform: rotate(3deg) translate(0px, -4px);

@@ -4,6 +4,8 @@ import { useRouter } from 'next/router'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import NProgress from 'nprogress'
+import SEO from '../../next-seo.config'
+import { DefaultSeo } from 'next-seo'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { events } = useRouter()
@@ -31,6 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Fragment>
       <Head>
         <title>Trips</title>
+        <DefaultSeo {...SEO} />
       </Head>
       <GlobalContext>
         <Component {...pageProps} />

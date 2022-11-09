@@ -8,6 +8,7 @@ export type PlaceType = {
   id: string
   description?: {
     html: string
+    text: string
   }
   gallery: Array<ImageType>
 }

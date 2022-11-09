@@ -1,11 +1,16 @@
 import { useRouter } from 'next/router'
 import { MapContainer, TileLayer, Marker, Tooltip } from 'react-leaflet'
-
+import L from 'leaflet'
+import * as Styled from './styles'
 import { MapProps } from './types'
 
 const Map: React.FC<MapProps> = ({ places }) => {
   const { push } = useRouter()
-
+  const icon = new L.Icon({
+    iconUrl: '/marker.svg',
+    iconSize: [40, 30],
+    iconAnchor: [17, 27]
+  })
   const MAPBOX_API_KEY = process.env.NEXT_PUBLIC_MAPBOX_API_KEY
   const MAPBOX_USER_ID = process.env.NEXT_PUBLIC_MAPBOX_USER_ID
   const MAPBOX_STYLED_ID = process.env.NEXT_PUBLIC_MAPBOX_STYLED_ID
@@ -24,34 +29,44 @@ const Map: React.FC<MapProps> = ({ places }) => {
       />
     )
   }
+  //todo minzoom and infinite world in mobile view with mapConsumer
+  //innerWidth ||document.clientWidth ||body.clientWidth = crossbrowswer
   return (
-    <MapContainer
-      center={[31.505, -0.09]}
-      zoom={2}
-      scrollWheelZoom={true}
-      style={{ width: '100%', height: '100%' }}
-    >
-      <CustomTileLayer />
-      {places?.map(({ id, location, name, slug }) => {
-        const { latitude, longitude } = location
-        return (
-          <Marker
-            key={`place-${id}`}
-            position={[latitude, longitude]}
-            eventHandlers={{
-              click: () => push(`place/${slug}`)
-            }}
-          >
-            <Tooltip
-              content={name}
-              direction='top'
-              opacity={1}
-              offset={[-10, -15]}
-            />
-          </Marker>
-        )
-      })}
-    </MapContainer>
+    <Styled.Wrapper>
+      <MapContainer
+        center={[31.505, -0.09]}
+        zoom={3}
+        minZoom={3}
+        maxBounds={[
+          [-180, 180],
+          [180, -180]
+        ]}
+        scrollWheelZoom={true}
+        style={{ width: '100%', height: '100%' }}
+      >
+        <CustomTileLayer />
+        {places?.map(({ id, location, name, slug }) => {
+          const { latitude, longitude } = location
+          return (
+            <Marker
+              key={`place-${id}`}
+              position={[latitude, longitude]}
+              eventHandlers={{
+                click: () => push(`place/${slug}`)
+              }}
+              icon={icon}
+            >
+              <Tooltip
+                content={name}
+                direction='top'
+                opacity={1}
+                offset={[0, -20]}
+              />
+            </Marker>
+          )
+        })}
+      </MapContainer>
+    </Styled.Wrapper>
   )
 }
 
