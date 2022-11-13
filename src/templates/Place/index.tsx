@@ -1,11 +1,12 @@
 import { LinkWrapper } from 'components/LinkWrapper'
 import Image from 'next/image'
-import { X } from 'phosphor-react'
+import { ArrowCircleUp, X } from 'phosphor-react'
 import { PlaceTemplateProps } from './types'
 import * as Styled from './styles'
 import { useRouter } from 'next/router'
 import { Fragment } from 'react'
 import { NextSeo } from 'next-seo'
+import Link from 'next/link'
 
 const PlaceTemplate: React.FC<PlaceTemplateProps> = ({ place }) => {
   const { isFallback } = useRouter()
@@ -16,9 +17,9 @@ const PlaceTemplate: React.FC<PlaceTemplateProps> = ({ place }) => {
       <NextSeo
         title={`${place.name} | Trips`}
         description={place.description?.text}
-        canonical=''
+        canonical='https://trips.manucoutinho.com'
         openGraph={{
-          url: '',
+          url: `https://trips.manucoutinho.com/${place.slug}`,
           title: `${place.name} | Trips`,
           description: place.description?.text,
           images: [
@@ -54,6 +55,19 @@ const PlaceTemplate: React.FC<PlaceTemplateProps> = ({ place }) => {
             ))}
           </Styled.Gallery>
         </Styled.Wrapper>
+        <Link
+          href={`https://excursionista.manucoutinho.com/`}
+          title='Excursionista'
+          rel='noopener noreferrer'
+          target='_blank'
+        >
+          <Styled.Action>Curtiu ? Então veja mais destinos...</Styled.Action>
+        </Link>
+        <Styled.GoTop>
+          <Link href='#'>
+            <ArrowCircleUp />
+          </Link>
+        </Styled.GoTop>
       </Styled.Container>
     </Fragment>
   )

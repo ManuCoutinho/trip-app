@@ -1,10 +1,11 @@
 import { render } from '@testing-library/react'
 import { RenderOptions } from '@testing-library/react/types'
-import { ThemeContextProvider } from 'contexts/ThemeContext'
 import { ReactElement, FC, ReactNode } from 'react'
+import { ThemeProvider } from 'styled-components'
+import theme from '../styles/theme/theme'
 
 const MockProviders: FC<{ children: ReactNode }> = ({ children }) => {
-  return <ThemeContextProvider>{children}</ThemeContextProvider>
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }
 
 const customRender = (

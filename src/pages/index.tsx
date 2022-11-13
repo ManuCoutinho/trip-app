@@ -12,7 +12,9 @@ const Home: NextPage<MapProps> = ({ places }) => {
 export default Home
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { places } = await graphqlClient.request<GetPlacesQuery>(GET_PLACES)
+  const { places } = await graphqlClient.request<GetPlacesQuery>(GET_PLACES, {
+    first: 100
+  })
   return {
     props: {
       places: places

@@ -1,8 +1,14 @@
 import 'styled-components'
-
 declare module 'styled-components' {
-  export interface DefaultTheme extends CustomTheme {
-    title: string
+  interface DefaultTheme {
+    colors: {
+      black: string
+      text: string
+      background: string
+      primary: string
+      secondary: string
+      highlight: string
+    }
     font: {
       text: string
       title: string
@@ -33,18 +39,6 @@ declare module 'styled-components' {
       md: string
       lg: string
       container: string
-    }
-  }
-
-  export interface CustomTheme {
-    title: string
-    colors: {
-      black: string
-      white: string
-      background: string
-      primary: string
-      secondary: string
-      highlight: string
     }
   }
 }

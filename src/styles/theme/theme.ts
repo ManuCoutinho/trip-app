@@ -1,10 +1,6 @@
-import { DefaultTheme, CustomTheme } from 'styled-components'
-import dark from './dark'
-import light from './light'
+import { DefaultTheme } from 'styled-components'
 
-export type Theme = typeof defaultTheme
-
-const defaultTheme = {
+export default {
   font: {
     text: 'sans-serif',
     title: 'sans-serif'
@@ -35,10 +31,13 @@ const defaultTheme = {
     md: '3rem',
     lg: '5rem',
     container: '100rem'
+  },
+  colors: {
+    black: '#090B09',
+    text: '#d6d6d6',
+    background: '#030518',
+    primary: '#F88F00',
+    secondary: '#475569',
+    highlight: '#fc4949'
   }
-} as const
-
-function combineTheme(theme: CustomTheme): DefaultTheme {
-  return { ...defaultTheme, ...theme }
-}
-export { combineTheme, dark, light }
+} as DefaultTheme

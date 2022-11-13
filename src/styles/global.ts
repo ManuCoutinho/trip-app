@@ -64,7 +64,7 @@ body, html, #__next {
 body {
   ${({ theme }) => css`
     background: ${theme.colors.background};
-    color: ${theme.colors.white};
+    color: ${theme.colors.text};
     transition: ${theme.transition};
   `}
 }

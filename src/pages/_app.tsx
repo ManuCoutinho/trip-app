@@ -1,11 +1,13 @@
 import { Fragment, useEffect } from 'react'
-import GlobalContext from 'contexts'
 import { useRouter } from 'next/router'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import NProgress from 'nprogress'
 import SEO from '../../next-seo.config'
 import { DefaultSeo } from 'next-seo'
+import { ThemeProvider } from 'styled-components'
+import GlobalStyle from 'styles/global'
+import theme from 'styles/theme/theme'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { events } = useRouter()
@@ -35,9 +37,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Trips</title>
         <DefaultSeo {...SEO} />
       </Head>
-      <GlobalContext>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <Component {...pageProps} />
-      </GlobalContext>
+      </ThemeProvider>
     </Fragment>
   )
 }

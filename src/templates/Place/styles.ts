@@ -14,6 +14,21 @@ export const Wrapper = styled.div`
     gap: ${theme.spacing.md};
   `}
 `
+export const Action = styled.p`
+  ${({ theme }) => css`
+    @media only screen and (max-width: 575px) {
+      text-align: center;
+    }
+    margin: 3rem 0;
+    line-height: 2.5rem;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      text-decoration: underline;
+      color: ${theme.colors.primary};
+      transition: color 0.3s ease-out;
+    }
+  `}
+`
 export const Heading = styled.h1`
   ${({ theme }) => css`
     padding: 0.5rem;
@@ -26,8 +41,8 @@ export const Heading = styled.h1`
 `
 export const Content = styled.div`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
-    line-height: 2.5rem;
+    color: ${theme.colors.text};
+    line-height: 2.85rem;
     line-break: normal;
     white-space: pre-line;
     transition: ${theme.transition};
@@ -35,9 +50,13 @@ export const Content = styled.div`
       margin-bottom: 1rem;
     }
 
-    & a:hover {
-      color: ${theme.colors.highlight};
-      transition: ${theme.transition};
+    & a {
+      color: ${theme.colors.primary};
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        text-decoration: underline;
+        transition: ${theme.transition};
+      }
     }
   `}
 `
@@ -73,4 +92,24 @@ const placeholderShimmer = keyframes`
   100%{
     background-position: 40rem 0
   }
+`
+export const GoTop = styled.span`
+  ${({ theme }) => css`
+    @media only screen and (max-width: 575px) {
+      bottom: 10%;
+      left: 90%;
+    }
+    position: relative;
+    bottom: 6rem;
+    left: 100%;
+    padding-right: 1rem;
+    z-index: 1100;
+    color: ${theme.colors.text};
+    transition: ${theme.transition};
+    font-size: ${theme.fontSize.xlg};
+    &:hover {
+      color: ${theme.colors.highlight};
+      transition: ${theme.transition};
+    }
+  `}
 `
