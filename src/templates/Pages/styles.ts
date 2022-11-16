@@ -9,7 +9,7 @@ export const Container = styled.section`
     flex-direction: column;
     height: 100vh;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
   `}
 `
 export const Heading = styled.h1`
@@ -18,12 +18,15 @@ export const Heading = styled.h1`
     margin-bottom: 5rem;
   `}
 `
-export const Content = styled.p`
+export const Content = styled.div`
   ${({ theme }) => css`
     font-size: ${theme.fontSize.lg};
     line-height: 2.8rem;
-    text-align: left;
-    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    p {
+      text-align: left;
+      margin-bottom: 1rem;
+    }
 
     a {
       color: ${theme.colors.primary};

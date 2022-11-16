@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     z-index: 1100; //bigger than leaflet
     top: 3rem;
     right: 3rem;
-    color: ${theme.colors.text};
+    color: ${theme.colors.info};
     transition: ${theme.transition};
     &:hover {
       color: ${theme.colors.highlight};

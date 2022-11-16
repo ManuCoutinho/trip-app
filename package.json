@@ -1,6 +1,6 @@
 {
   "name": "trip-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "author": "Emanuela Coutinho",
   "license": "MIT License",
@@ -17,10 +17,10 @@
     "react",
     "typescript",
     "jest",
-    "storybook"
+    "graphql"
   ],
   "engines": {
-    "node": ">=16.15.1",
+    "node": "16.15.1",
     "npm": ">=8.11"
   },
   "overrides": {

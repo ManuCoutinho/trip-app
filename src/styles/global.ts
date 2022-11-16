@@ -15,11 +15,6 @@ html {
    font-size: 52.5%;
  }
   
- @media (max-width: 27em) {
-  html {
-    font-size: 47.5%;
-  }
-}
 }
 body, html, #__next {
   scroll-behavior: smooth;
@@ -70,8 +65,10 @@ body {
 }
 
 body, input, textarea, button {
- font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
- font-size: 16px;
+${({ theme }) => css`
+  font-family: ${theme.font};
+  font-size: 16px;
+`}
 }
 
 p {
@@ -82,7 +79,6 @@ ${({ theme }) => css`
 h1, h2, h3, h4, h5, h6, strong {
  ${({ theme }) => css`
    font-weight: ${theme.fontWeight.bold};
-   font-family: ${theme.font.title};
  `}
 }
 

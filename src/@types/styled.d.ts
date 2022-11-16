@@ -8,11 +8,9 @@ declare module 'styled-components' {
       primary: string
       secondary: string
       highlight: string
+      info: string
     }
-    font: {
-      text: string
-      title: string
-    }
+    font: string
     fontSize: {
       xsm: string
       sm: string

@@ -9,14 +9,21 @@ const PagesTemplate: React.FC<PageTemplateProps> = ({ heading, body }) => {
   return (
     <Fragment>
       <NextSeo
-        title='pais and title'
-        description=''
-        canonical=''
+        title={`${heading} | Trips`}
+        description={body}
+        canonical='https://www.trips.manucoutinho.com'
         openGraph={{
-          url: '',
-          title: '',
-          description: '',
-          images: [{ url: '', width: 1280, height: 720, alt: '' }]
+          url: 'https://www.trips.manucoutinho.com',
+          title: 'Trips',
+          description: body,
+          images: [
+            {
+              url: 'https://www.trips.manucoutinho.com/preview.png',
+              width: 1280,
+              height: 720,
+              alt: 'mapa mundi'
+            }
+          ]
         }}
       />
       <Styled.Container>
