@@ -11,7 +11,7 @@ import Link from 'next/link'
 const PlaceTemplate: React.FC<PlaceTemplateProps> = ({ place }) => {
   const { isFallback } = useRouter()
   if (isFallback) return null
-
+  //https://excursionista.manucoutinho.com/gallery?query=${place.name}
   return (
     <Fragment>
       <NextSeo
@@ -56,7 +56,7 @@ const PlaceTemplate: React.FC<PlaceTemplateProps> = ({ place }) => {
           </Styled.Gallery>
         </Styled.Wrapper>
         <Link
-          href={`https://excursionista.manucoutinho.com/gallery?query=${place.name}`}
+          href={`http://localhost:3000/gallery?query=${place.name}`}
           title='Excursionista'
           rel='noopener noreferrer'
           target='_blank'
