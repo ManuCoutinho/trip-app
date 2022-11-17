@@ -13,15 +13,23 @@ const HomeTemplate: React.FC<HomeTemplateProps> = ({ places }) => {
   return (
     <Fragment>
       <NextSeo
-        title=''
-        description=''
-        canonical=''
+        title='Trips'
+        description='Site para mostrar fotos incriveis dos lugares para os quais eu já viajei e/ou pretendo viajar ao redor do mundo'
+        canonical={process.env.NEXT_PUBLIC_CANONICAL}
         openGraph={{
-          url: '',
-          title: '',
-          description: '',
-          images: [{ url: '', width: 1280, height: 720, alt: '' }],
-          siteName: ''
+          url: process.env.NEXT_PUBLIC_CANONICAL,
+          title: 'Trips',
+          description:
+            'Site para mostrar fotos incriveis dos lugares para os quais eu já viajei e/ou pretendo viajar ao redor do mundo',
+          images: [
+            {
+              url: `${process.env.NEXT_PUBLIC_CANONICAL}/preview.png`,
+              width: 1200,
+              height: 800,
+              alt: 'Mapa mundial',
+              type: 'image/png'
+            }
+          ]
         }}
       />
       <LinkWrapper href='/about' title='About'>

@@ -11,15 +11,15 @@ import Link from 'next/link'
 const PlaceTemplate: React.FC<PlaceTemplateProps> = ({ place }) => {
   const { isFallback } = useRouter()
   if (isFallback) return null
-  //https://excursionista.manucoutinho.com/gallery?query=${place.name}
+
   return (
     <Fragment>
       <NextSeo
         title={`${place.name} | Trips`}
         description={place.description?.text}
-        canonical='https://trips.manucoutinho.com'
+        canonical={process.env.NEXT_PUBLIC_CANONICAL}
         openGraph={{
-          url: `https://trips.manucoutinho.com/${place.slug}`,
+          url: `${process.env.NEXT_PUBLIC_CANONICAL}/${place.slug}`,
           title: `${place.name} | Trips`,
           description: place.description?.text,
           images: [
@@ -56,7 +56,7 @@ const PlaceTemplate: React.FC<PlaceTemplateProps> = ({ place }) => {
           </Styled.Gallery>
         </Styled.Wrapper>
         <Link
-          href={`http://localhost:3000/gallery?query=${place.name}`}
+          href={`${process.env.NEXT_PUBLIC_EXCURSIONISTA}/gallery?query=${place.name}`}
           title='Excursionista'
           rel='noopener noreferrer'
           target='_blank'
