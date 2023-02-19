@@ -29,7 +29,7 @@ const Map: React.FC<MapProps> = ({ places }) => {
       />
     )
   }
-  //todo minzoom and infinite world in mobile view with mapConsumer
+  //todo: minzoom and infinite world in mobile view with mapConsumer
   //innerWidth ||document.clientWidth ||body.clientWidth = crossbrowswer
   return (
     <Styled.Wrapper>
