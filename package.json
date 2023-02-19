@@ -4,7 +4,7 @@
   "private": true,
   "author": "Emanuela Coutinho",
   "license": "MIT License",
-  "description": "App de viagens e fotos",
+  "description": "places to travel and beautiful photos",
   "bugs": {
     "url": "https://github.com/ManuCoutinho/trip-app"
   },
@@ -32,14 +32,15 @@
     "start": "next start",
     "lint": "next lint --max-warnings=0",
     "prepare": "husky install",
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch --max-workers=25%",
+    "coverage": "jest --coverage --silent",
     "codegen": "graphql-codegen --config codegen.yml"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
       "eslint src --fix",
-      "jest --passWithNoTests"
+      "jest --passWithNoTests --findRelatedTests"
     ],
     "*.{json,md, yaml}": [
       "prettier --write"
@@ -91,6 +92,7 @@
     "jest-canvas-mock": "^2.4.0",
     "jest-environment-jsdom": "^29.1.2",
     "lint-staged": "^13.0.3",
+    "next-router-mock": "^0.9.1",
     "prettier": "^2.7.1",
     "stylelint": "^14.14.0",
     "stylelint-config-recommended": "^9.0.0",
