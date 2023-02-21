@@ -4,9 +4,11 @@ import { Info } from 'phosphor-react'
 import { NextSeo } from 'next-seo'
 import { LinkWrapper } from 'components/LinkWrapper'
 import { HomeTemplateProps } from './types'
+import Loading from 'components/Loading'
 
 const Map = dynamic(() => import('components/Map'), {
-  ssr: false
+  ssr: false,
+  loading: () => <Loading />
 })
 
 const HomeTemplate: React.FC<HomeTemplateProps> = ({ places }) => {

@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PagesTemplate /> should match to snapshot 1`] = `
+<section
+  class="sc-gswNZR bRTHbR"
+>
+  <div
+    class="sc-bcXHqe eCYpHH"
+    data-testid="back-link"
+  >
+    <a
+      href="/"
+      title="link to Home"
+    >
+      <svg
+        aria-label="Home"
+        fill="currentColor"
+        height="32"
+        viewBox="0 0 256 256"
+        width="32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="none"
+          height="256"
+          width="256"
+        />
+        <line
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="16"
+          x1="200"
+          x2="56"
+          y1="56"
+          y2="200"
+        />
+        <line
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="16"
+          x1="200"
+          x2="56"
+          y1="200"
+          y2="56"
+        />
+      </svg>
+    </a>
+  </div>
+  <h1
+    class="sc-dkrFOg cqzPDp"
+  >
+    Heading Template test
+  </h1>
+  <div
+    class="sc-hLBbgP ikdcep"
+  >
+    <div>
+      Body template test mock
+    </div>
+  </div>
+</section>
+`;

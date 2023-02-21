@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlaceTemplate /> should match to snapshot 1`] = `
+<div>
+  <section
+    class="sc-gswNZR hQQdUk"
+  >
+    <div
+      class="sc-bcXHqe eCYpHH"
+      data-testid="back-link"
+    >
+      <a
+        href="/"
+        title="link to Home"
+      >
+        <svg
+          aria-label="Home"
+          fill="currentColor"
+          height="32"
+          viewBox="0 0 256 256"
+          width="32"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="none"
+            height="256"
+            width="256"
+          />
+          <line
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+            x1="200"
+            x2="56"
+            y1="56"
+            y2="200"
+          />
+          <line
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+            x1="200"
+            x2="56"
+            y1="200"
+            y2="56"
+          />
+        </svg>
+      </a>
+    </div>
+    <div
+      class="sc-dkrFOg cJzsCG"
+    >
+      <h1
+        class="sc-eDvSVe kAHOWE"
+      >
+        Rio de Janeiro
+      </h1>
+      <div
+        class="sc-jSUZER gMLWgb"
+      >
+        some description about the city here
+      </div>
+      <div
+        class="sc-gKPRtg fVssuT"
+      >
+        <img
+          alt="Rio de Janeiro"
+          data-nimg="1"
+          decoding="async"
+          height="600"
+          loading="lazy"
+          src="/_next/image?url=%2Fpic-rj.jpg&w=2048&q=75"
+          srcset="/_next/image?url=%2Fpic-rj.jpg&w=1080&q=75 1x, /_next/image?url=%2Fpic-rj.jpg&w=2048&q=75 2x"
+          style="color: transparent;"
+          width="1000"
+        />
+      </div>
+    </div>
+    <a
+      href="/undefined/gallery?query=Rio%20de%20Janeiro"
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Excursionista"
+    >
+      <p
+        class="sc-hLBbgP jtzTbC"
+      >
+        Curtiu ? Então veja mais destinos...
+      </p>
+    </a>
+    <span
+      class="sc-iBYQkv flWBRS"
+    >
+      <a
+        href="/#"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          viewBox="0 0 256 256"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="none"
+            height="256"
+            width="256"
+          />
+          <circle
+            cx="128"
+            cy="128"
+            fill="none"
+            r="96"
+            stroke="currentColor"
+            stroke-miterlimit="10"
+            stroke-width="16"
+          />
+          <polyline
+            fill="none"
+            points="94.1 121.9 128 88 161.9 121.9"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          />
+          <line
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+            x1="128"
+            x2="128"
+            y1="168"
+            y2="88"
+          />
+        </svg>
+      </a>
+    </span>
+  </section>
+</div>
+`;

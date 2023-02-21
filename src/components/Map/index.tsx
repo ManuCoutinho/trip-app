@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { useRouter } from 'next/router'
 import { MapContainer, TileLayer, Marker, Tooltip } from 'react-leaflet'
 import L from 'leaflet'
@@ -70,4 +71,4 @@ const Map: React.FC<MapProps> = ({ places }) => {
   )
 }
 
-export default Map
+export default memo(Map)

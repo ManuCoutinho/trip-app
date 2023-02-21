@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loading /> should match to snapshot 1`] = `
+<div>
+  <section
+    aria-atomic="true"
+    aria-labelledby="loading"
+    aria-live="polite"
+    class="sc-bcXHqe ewlqML"
+    data-testid="loading"
+    role="status"
+  >
+    <div
+      class="sc-gswNZR iMqyrN"
+      color="#fc4949"
+    />
+    <div
+      class="sc-gswNZR dtutif"
+      color="#6d6d6d"
+    />
+    <div
+      class="sc-gswNZR iMqyrN"
+      color="#fc4949"
+    />
+    <div
+      class="sc-gswNZR dtutif"
+      color="#6d6d6d"
+    />
+    <div
+      class="sc-gswNZR iMqyrN"
+      color="#fc4949"
+    />
+  </section>
+</div>
+`;

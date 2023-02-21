@@ -3,6 +3,7 @@
 exports[`<LinkWrapper/> should match to snapshot  1`] = `
 <div
   class="sc-bcXHqe eCYpHH"
+  data-testid="back-link"
 >
   <a
     href="/about"
