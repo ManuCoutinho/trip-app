@@ -97,7 +97,7 @@
     "next-router-mock": "^0.9.1",
     "prettier": "^2.7.1",
     "stylelint": "^14.14.0",
-    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-config-recommended": "^10.0.1",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
     "ts-jest": "^29.0.3",
