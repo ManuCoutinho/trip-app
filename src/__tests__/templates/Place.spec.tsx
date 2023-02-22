@@ -1,10 +1,6 @@
 import PlaceTemplate from 'templates/Place'
 import { render } from '__mocks__/customRender'
-import { renderHook, screen } from '@testing-library/react'
-import placePropsMock, { placeWithOutHtml } from '__mocks__/data/placeMock'
-import mockRouter from 'next-router-mock'
-import { useRouter } from 'next/router'
-
+import placePropsMock from '__mocks__/data/placeMock'
 jest.mock('next/router', () => require('next-router-mock'))
 
 describe('<PlaceTemplate />', () => {
@@ -16,11 +12,7 @@ describe('<PlaceTemplate />', () => {
     expect(getByRole('link', { name: /excursionista/i })).toBeInTheDocument()
     expect(getByText(/curtiu/i)).toBeInTheDocument()
   })
-  it('should return null when isFallback is equal true', async () => {
-    const { result } = renderHook(() => useRouter())
-    console.log(result.current.isFallback)
-    const { getByText } = render(<PlaceTemplate {...placeWithOutHtml} />)
-  })
+
   it('should match to snapshot', () => {
     const { container } = render(<PlaceTemplate {...placePropsMock} />)
     expect(container).toMatchSnapshot()
