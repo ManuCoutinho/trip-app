@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
@@ -8,6 +8,9 @@ import { DefaultSeo } from 'next-seo'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyle from 'styles/global'
 import theme from 'styles/theme/theme'
+import { Provider, ErrorBoundary } from '@rollbar/react'
+import Error from './_error'
+import { rollbarConfig } from '../../Rollbar'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { events } = useRouter()
@@ -32,16 +35,18 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, [events])
   return (
-    <Fragment>
+    <Provider config={rollbarConfig}>
       <Head>
         <title>Trips</title>
         <DefaultSeo {...SEO} />
       </Head>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </Fragment>
+      <ErrorBoundary fallbackUI={<Error />}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </ErrorBoundary>
+    </Provider>
   )
 }
 

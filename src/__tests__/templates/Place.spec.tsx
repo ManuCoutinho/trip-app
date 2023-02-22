@@ -20,7 +20,6 @@ describe('<PlaceTemplate />', () => {
     const { result } = renderHook(() => useRouter())
     console.log(result.current.isFallback)
     const { getByText } = render(<PlaceTemplate {...placeWithOutHtml} />)
-    screen.debug()
   })
   it('should match to snapshot', () => {
     const { container } = render(<PlaceTemplate {...placePropsMock} />)

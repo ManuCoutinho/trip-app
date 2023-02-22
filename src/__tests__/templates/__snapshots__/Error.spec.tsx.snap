@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorTemplate /> should match to snapshot 1`] = `
+<section
+  class="sc-bcXHqe bViWhL"
+>
+  <div
+    class="sc-dkrFOg ihBGEd"
+  >
+    <img
+      alt="error image"
+      data-nimg="1"
+      decoding="async"
+      height="500"
+      loading="lazy"
+      src="/assets/error.svg"
+      srcset="/assets/error.svg 1x, /assets/error.svg 2x"
+      style="color: transparent;"
+      width="500"
+    />
+  </div>
+  <div
+    class="sc-gswNZR Fbifm"
+  >
+    <p>
+      Error 500
+    </p>
+    <h3
+      class="sc-jSUZER ikUjKO"
+    >
+      Oops! Something unexpected has occurred!
+    </h3>
+    <p
+      class="sc-hLBbgP fTgiIa"
+    >
+       We're sorry for the inconvenience, but it looks like the page you're
+            trying to access is down for maintenance.
+    </p>
+    <p
+      class="sc-hLBbgP fTgiIa"
+    >
+      Our team is already working to normalize access.
+    </p>
+    <p
+      class="sc-hLBbgP fTgiIa"
+    >
+      Thanks for the patience!
+    </p>
+    <button
+      class="sc-eDvSVe jeDjtr"
+      type="button"
+    >
+      Home
+    </button>
+  </div>
+</section>
+`;

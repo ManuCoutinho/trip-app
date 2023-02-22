@@ -47,6 +47,7 @@
     ]
   },
   "dependencies": {
+    "@rollbar/react": "^0.11.1",
     "graphql": "^16.6.0",
     "graphql-request": "^5.0.0",
     "leaflet": "^1.9.2",
@@ -58,6 +59,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-leaflet": "^4.1.0",
+    "rollbar": "^2.26.1",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {

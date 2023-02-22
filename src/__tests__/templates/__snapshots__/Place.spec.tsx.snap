@@ -79,10 +79,10 @@ exports[`<PlaceTemplate /> should match to snapshot 1`] = `
       </div>
     </div>
     <a
-      href="/undefined/gallery?query=Rio%20de%20Janeiro"
+      href="/undefined/gallery?query=Rio%20de%20Janeiro&utm_source=tripsapp&utm_medium=referral"
       rel="noopener noreferrer"
       target="_blank"
-      title="Excursionista"
+      title="link to Excursionista"
     >
       <p
         class="sc-hLBbgP jtzTbC"

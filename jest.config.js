@@ -23,7 +23,9 @@ const customJestConfig = {
     '!<rootDir>/.next/**',
     '!<rootDir>/*.config.js',
     '!<rootDir>/coverage/**',
-    '!<rootDir>/src/graphql/**'
+    '!<rootDir>/src/graphql/**',
+    '!<rootDir>/src/pages/*_*.tsx',
+    '!<rootDir>/src/pages/*index*.tsx'
   ],
   testEnvironment: 'jest-environment-jsdom',
   moduleDirectories: ['node_modules', 'src/'],
