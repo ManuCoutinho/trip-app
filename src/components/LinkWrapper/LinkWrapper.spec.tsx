@@ -7,6 +7,7 @@ const linkProps = {
   href: 'about',
   title: 'about'
 }
+
 describe('<LinkWrapper/>', () => {
   it('should render a link and children correctly ', () => {
     render(<LinkWrapper {...linkProps} />)

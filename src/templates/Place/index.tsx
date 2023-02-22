@@ -56,8 +56,8 @@ const PlaceTemplate: React.FC<PlaceTemplateProps> = ({ place }) => {
           </Styled.Gallery>
         </Styled.Wrapper>
         <Link
-          href={`${process.env.NEXT_PUBLIC_EXCURSIONISTA}/gallery?query=${place.name}`}
-          title='Excursionista'
+          href={`${process.env.NEXT_PUBLIC_EXCURSIONISTA}/gallery?query=${place.name}&utm_source=tripsapp&utm_medium=referral`}
+          title='link to Excursionista'
           rel='noopener noreferrer'
           target='_blank'
         >

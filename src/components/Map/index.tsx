@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { useRouter } from 'next/router'
 import { MapContainer, TileLayer, Marker, Tooltip } from 'react-leaflet'
 import L from 'leaflet'
@@ -29,7 +30,7 @@ const Map: React.FC<MapProps> = ({ places }) => {
       />
     )
   }
-  //todo minzoom and infinite world in mobile view with mapConsumer
+  //todo: minzoom and infinite world in mobile view with mapConsumer
   //innerWidth ||document.clientWidth ||body.clientWidth = crossbrowswer
   return (
     <Styled.Wrapper>
@@ -70,4 +71,4 @@ const Map: React.FC<MapProps> = ({ places }) => {
   )
 }
 
-export default Map
+export default memo(Map)

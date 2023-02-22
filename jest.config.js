@@ -22,7 +22,10 @@ const customJestConfig = {
     '!<rootDir>/out/**',
     '!<rootDir>/.next/**',
     '!<rootDir>/*.config.js',
-    '!<rootDir>/coverage/**'
+    '!<rootDir>/coverage/**',
+    '!<rootDir>/src/graphql/**',
+    '!<rootDir>/src/pages/*_*.tsx',
+    '!<rootDir>/src/pages/*index*.tsx'
   ],
   testEnvironment: 'jest-environment-jsdom',
   moduleDirectories: ['node_modules', 'src/'],
@@ -31,7 +34,8 @@ const customJestConfig = {
     //   '<rootDir>/__mocks__/fileMock.js',
     // '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
     leaflet: require.resolve('leaflet'),
-    reactLeaflet: require.resolve('react-leaflet')
+    reactLeaflet: require.resolve('react-leaflet'),
+    'react-leaflet': '<rootDir>/mocks/reactLeafletMock.js'
   },
   testMatch: [
     '**/__tests__/**/*.[t]s?(x)',
