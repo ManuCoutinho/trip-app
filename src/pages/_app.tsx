@@ -38,8 +38,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Provider config={rollbarConfig}>
       <Head>
         <title>Trips</title>
-        <DefaultSeo {...SEO} />
       </Head>
+      <DefaultSeo {...SEO} />
       <ErrorBoundary fallbackUI={<Error />}>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
