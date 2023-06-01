@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import Script from 'next/script'
 import { useRouter } from 'next/router'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
@@ -45,6 +46,17 @@ function MyApp({ Component, pageProps }: AppProps) {
           <GlobalStyle />
           <Component {...pageProps} />
         </ThemeProvider>
+        <Script
+          strategy='lazyOnload'
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=G-8CFX32918D'
+        />
+        <Script id='google-tag' strategy='lazyOnload'>
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8CFX32918D');`}
+        </Script>
       </ErrorBoundary>
     </Provider>
   )
