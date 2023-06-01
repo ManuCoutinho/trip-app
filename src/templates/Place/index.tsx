@@ -61,7 +61,9 @@ const PlaceTemplate: React.FC<PlaceTemplateProps> = ({ place }) => {
           rel='noopener noreferrer'
           target='_blank'
         >
-          <Styled.Action>Curtiu ? Então veja mais destinos...</Styled.Action>
+          <Styled.Action>
+            Curtiu ? Então navegue em mais imagens deste lugar incrível...
+          </Styled.Action>
         </Link>
         <Styled.GoTop>
           <Link href='#'>

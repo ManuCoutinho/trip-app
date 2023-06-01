@@ -1,7 +1,7 @@
 import Rollbar from 'rollbar'
 
 export const rollbarConfig: Rollbar.Configuration = {
-  accessToken: process.env.ROLLBAR_TOKEN,
+  accessToken: process.env.NEXT_PUBLIC_ROLLBAR_TOKEN,
   captureUncaught: true,
   captureUnhandledRejections: true,
   payload: {
