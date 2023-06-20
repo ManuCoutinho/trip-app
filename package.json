@@ -49,7 +49,7 @@
   "dependencies": {
     "@rollbar/react": "^0.11.1",
     "graphql": "^16.6.0",
-    "graphql-request": "^5.0.0",
+    "graphql-request": "^6.1.0",
     "leaflet": "^1.9.2",
     "next": "^13.0.1",
     "next-seo": "^5.14.1",
