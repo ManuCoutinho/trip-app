@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "@rollbar/react": "^0.11.1",
-    "graphql": "^16.6.0",
+    "graphql": "^16.7.1",
     "graphql-request": "^5.0.0",
     "leaflet": "^1.9.2",
     "next": "^13.0.1",
